@@ -2,12 +2,16 @@
   "name": "zanphp/rpc-context",
   "require": {
     "php": ">=5.6",
+    "zanphp/coroutine": "zanphp/dev-master",
     "zanphp/support": "zanphp/dev-master"
   },
   "autoload": {
     "psr-4": {
       "ZanPHP\\RpcContext\\": "src/"
-    }
+    },
+    "files": [
+      "src/functions.php"
+    ]
   },
   "extra": {
     "branch-alias": {
