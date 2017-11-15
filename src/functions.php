@@ -26,7 +26,7 @@ function setRpcContext($key, $value)
     return new SysCall(function (Task $task) use ($key, $value) {
         $context = $task->getContext();
         $rpcCtx = $context->get("rpc-context", null);
-        if ($rpcCtx instanceof RpcContext) {
+        if (!$rpcCtx instanceof RpcContext) {
             $rpcCtx = new RpcContext;
             $context->set("rpc-context", $rpcCtx);
         }
